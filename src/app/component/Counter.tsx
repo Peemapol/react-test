@@ -36,6 +36,7 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
         <button
           onClick={increment}
           className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+          data-testid="button1"
         >
           {" "}
           Increment
@@ -43,6 +44,8 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
         <button
           onClick={decrement}
           className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+          data-testid="button2"
+
         >
           {" "}
           Decrement
@@ -50,6 +53,8 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
         <button
           onClick={restart}
           className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+          data-testid="button3"
+
         >
           {" "}
           Set 0
@@ -57,6 +62,8 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
         <button
           onClick={switchSign}
           className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+          data-testid="button4"
+
         >
           {" "}
           Switch Sign
