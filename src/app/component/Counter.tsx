@@ -1,13 +1,12 @@
-'use client'
+"use client"
 
-import React, { useState } from 'react'
+import React, { useState } from "react"
 
 interface CounterProps {
-  initialCount?: number;
+  initialCount?: number
 }
 
 const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
-
   const [count, setCount] = useState<number>(initialCount)
 
   const increment = (): void => {
@@ -26,16 +25,42 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
     setCount((prev) => prev * -1)
   }
 
-  return(
+  return (
     <div>
-      <h1>
-        Count: <span>{count}</span>
-      </h1>
+      <div className="flex items-center justify-center">
+        <p className="align-center text-5xl">
+          Count: <span>{count}</span>
+        </p>
+      </div>
       <div>
-        <button onClick={increment}> Increment</button>
-        <button onClick={decrement}> Decrement</button>
-        <button onClick={restart}> Set 0</button>
-        <button onClick={switchSign}> Switch Sign</button>
+        <button
+          onClick={increment}
+          className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+        >
+          {" "}
+          Increment
+        </button>
+        <button
+          onClick={decrement}
+          className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+        >
+          {" "}
+          Decrement
+        </button>
+        <button
+          onClick={restart}
+          className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+        >
+          {" "}
+          Set 0
+        </button>
+        <button
+          onClick={switchSign}
+          className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
+        >
+          {" "}
+          Switch Sign
+        </button>
       </div>
     </div>
   )
