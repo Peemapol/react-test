@@ -29,7 +29,7 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
     <div>
       <div className="flex items-center justify-center">
         <p className="align-center text-5xl">
-          Count: <span>{count}</span>
+          Count: <span data-testid="count">{count}</span>
         </p>
       </div>
       <div>
@@ -38,7 +38,6 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
           className="m-10 rounded-xl border-[1px] border-solid border-gray-400 px-10 py-2 duration-200 hover:bg-gray-200"
           data-testid="button1"
         >
-          {" "}
           Increment
         </button>
         <button
@@ -47,7 +46,6 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
           data-testid="button2"
 
         >
-          {" "}
           Decrement
         </button>
         <button
@@ -56,7 +54,6 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
           data-testid="button3"
 
         >
-          {" "}
           Set 0
         </button>
         <button
@@ -65,7 +62,6 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
           data-testid="button4"
 
         >
-          {" "}
           Switch Sign
         </button>
       </div>
