@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom"
 import { fireEvent, render, screen } from "@testing-library/react"
-import Counter from "@/app/component/Counter"
+import Counter from "@/components/ui/Counter"
 
 describe(Counter, () => {
   it("should renders button", () => {

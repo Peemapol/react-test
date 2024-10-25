@@ -1,4 +1,4 @@
-import Counter from "./component/Counter"
+import Counter from "@/components/ui/Counter"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
