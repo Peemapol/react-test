@@ -26,7 +26,7 @@ const Counter: React.FC<CounterProps> = ({ initialCount = 0 }) => {
   }
 
   return (
-    <div>
+    <div data-testid="counterComponent">
       <div className="flex items-center justify-center">
         <p className="align-center text-5xl">
           Count: <span data-testid="count">{count}</span>

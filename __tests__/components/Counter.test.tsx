@@ -24,7 +24,7 @@ describe(Counter, () => {
 
   it("should increment by 1 if increment button is clicked", () => {
     const { getByTestId, getByRole } = render(<Counter initialCount={0} />)
-    const incrementBtn = getByRole("button", {name: "Increment"})
+    const incrementBtn = getByRole("button", { name: "Increment" })
     const countValueBefore = Number(getByTestId("count").textContent)
     expect(countValueBefore).toEqual(0)
     fireEvent.click(incrementBtn)
@@ -34,11 +34,35 @@ describe(Counter, () => {
 
   it("should decrease by 1 if decrement button is clicked", () => {
     const { getByTestId, getByRole } = render(<Counter initialCount={1} />)
-    const decrementBtn = getByRole("button", {name: "Decrement"})
+    const decrementBtn = getByRole("button", { name: "Decrement" })
     const countValueBefore = Number(getByTestId("count").textContent)
     expect(countValueBefore).toEqual(1)
     fireEvent.click(decrementBtn)
     const countValueAfter = Number(getByTestId("count").textContent)
+    expect(countValueAfter).toEqual(0)
+  })
+
+  it("should switch negative to positive", () => {
+    const { getByTestId, getByRole } = render(<Counter initialCount={-1} />)
+    const bt = getByTestId("button4")
+    const countValueBefore = Number(getByTestId("count").textContent)
+    expect(countValueBefore).toEqual(-1)
+    fireEvent.click(bt)
+    const countValueAfter = Number(getByTestId("count").textContent)
+
+
+    expect(countValueAfter).toEqual(1)
+  })
+
+  it("should set zero", () => {
+    const { getByTestId, getByRole } = render(<Counter initialCount={-1} />)
+    const bt = getByTestId("button3")
+    const countValueBefore = Number(getByTestId("count").textContent)
+    expect(countValueBefore).toEqual(-1)
+    fireEvent.click(bt)
+    const countValueAfter = Number(getByTestId("count").textContent)
+
+
     expect(countValueAfter).toEqual(0)
   })
 })
